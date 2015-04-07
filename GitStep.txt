@@ -1,0 +1,39 @@
+一、
+
+1.安装Msysgit
+
+2.在本地创建Git仓库
+
+3.到刚刚创建的Git本地仓库中，右键Git Init Here，运行后会多出一个.git文件夹，表示本地git仓库创建成功
+
+4.右键Git Bash进入git命令行，为了把本地的仓库传到github，还需要配置ssh key
+
+5.设置git的user name和email: git config –global user.name "John "git config –global user.email "1051106986@qq.com"
+
+
+二、
+
+生成SSH密钥过程：
+
+1.查看是否已经有了ssh密钥：cd ~/.ssh
+如果没有密钥则不会有此文件夹，有则备份删除
+
+2.生存密钥：
+$ ssh-keygen -t rsa -C "1051106986@qq.com"
+按3个回车，密码为空。
+
+3.最后得到了两个文件(C:\Users\John\.ssh)：id_rsa和id_rsa.pub
+
+三、
+
+git是分布式的代码管理工具，远程的代码管理是基于ssh的，所以要使用远程的git则需要ssh的配置以及配置完生成的SSH Key
+
+1.打开id_rsa.pub，复制里面的key
+
+2.登陆github,点击settings,左侧菜单选择SSH Key,右侧点击'Add SSH Key',输入Title和Key,保存
+
+3.在git bash下输入ssh git@github.com验证是否与远程连接成功，如果成功，会提示You've successfully authenticated
+
+4.远程连接成功后，接下来就是要把本地仓库上传到github上去,而之前我们设置的user name和email会在每次commit的时候被git记录
+
+5.进入要上传的仓库，右键git bash，添加远程地址：git remote add origin git@github.com:John/JobWS.git
