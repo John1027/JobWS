@@ -1,0 +1,5 @@
+H:\JobWS\QuartzNet\Model\bin\Debug\Model.dll
+H:\JobWS\QuartzNet\Model\bin\Debug\Model.pdb
+H:\JobWS\QuartzNet\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+H:\JobWS\QuartzNet\Model\obj\Debug\Model.dll
+H:\JobWS\QuartzNet\Model\obj\Debug\Model.pdb
